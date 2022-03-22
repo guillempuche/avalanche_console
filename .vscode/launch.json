@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "start",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/index.ts",
+      // "runtimeExecutable": "npm",
+      "runtimeExecutable": "/Users/guillem/.nvm/versions/node/v16.0.0/bin/npm",
+      "runtimeArgs": [
+        "run-script",
+        "start",
+      ],
+      "console": "integratedTerminal",
+      "trace": true
+    },
+    {
+      "name": "dev",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/index.ts",
+      "runtimeExecutable": "/Users/guillem/.nvm/versions/node/v16.0.0/bin/npm",
+      "runtimeArgs": [
+        "run-script",
+        "dev",
+      ],
+      "console": "integratedTerminal",
+      "trace": true
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "name": "avalanche_nft",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Guillem Puche",
+  "license": "ISC",
+  "scripts": {
+    "start": "npm run lint & ts-node ./src/index.ts",
+    "dev": "nodemon",
+    "lint": "prettier --write 'src/**' & eslint --ext .ts,.js,.json"
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      "src"
+    ],
+    "ext": ".json,.ts,.env",
+    "stdin": false
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:json/recommended",
+      "prettier"
+    ],
+    "ignorePatterns": "dist",
+    "rules": {
+      "@typescript-eslint/no-non-null-assertion": "off"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "useTabs": false,
+    "tabWidth": 2,
+    "printWidth": 80
+  },
+  "dependencies": {
+    "avalanche": "^3.12.1",
+    "configstore": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "inquirer": "^8.2.1",
+    "prompt": "^1.2.2",
+    "prompts": "^2.4.2",
+    "rxjs": "^7.5.5"
+  },
+  "devDependencies": {
+    "@types/configstore": "^5.0.1",
+    "@types/inquirer": "^8.2.0",
+    "@types/node": "^17.0.21",
+    "@types/prompt": "^1.1.2",
+    "@types/prompts": "^2.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-json": "^3.1.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  },
+  "engines": {
+    "node": ">=14.16.0"
+  }
+}
